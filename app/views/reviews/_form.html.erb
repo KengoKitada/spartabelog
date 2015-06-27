@@ -1,0 +1,14 @@
+<%= form_for [@shop,@review] do |f| %>
+ <div class="form-group">
+ <%= f.label :score, '評価' %>
+ <%= f.text_area :score, class: "form-control" %>
+ </div>
+ <div class="form-group">
+ <%= f.label :body, 'レビュー' %>
+ <%= f.text_area :body, class: "form-control" %>
+
+ </div>
+
+<%= f.submit %>
+
+<% end %>
