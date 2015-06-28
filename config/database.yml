@@ -20,6 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: tabelog
+  port: 3306
+  username: kengo
+  password: 1127ways
+  host: localhost
+
