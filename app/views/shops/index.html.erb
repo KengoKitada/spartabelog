@@ -1,15 +1,18 @@
-<h1>登録店舗情報</h1>
-<table class="table table-striped">
+
+<h2>登録店舗情報</h2>
+<table class="table-hover">
   <thead>
     <th>店舗名</th>
   </thead>
   <tbody>
-    <%= @shop.each do |shop| %>
+    <% @shop.each do |shop| %>
       <tr>
-        <td><%= shop.shop_name %></td>
-        <td><%= link_to '詳細',shop,class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to shop.shop_name %></td>
+        <td><%= link_to '詳細',shop, class: "btn btn-default btn-xs"%></td>
       </tr>
       <% end %>
   </tbody>
 </table>
+
+
 

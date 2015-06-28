@@ -11,5 +11,23 @@
       <dt>店舗URL</dt>
       <dd><%= @shop.url %></dd>
     </dl>
+<%= link_to 'Edit', edit_shop_path(@shop) %> |
+<%= link_to 'Back', shops_path %> |
+<%= link_to 'レビューを書く', new_shop_review_path(@shop) %>
+
+<hr>
+
+<h2>レビュー一覧</h2>
+
+<% @shop.reviews.each do |review| %>
+
+<p>
+<%= review.user.user_name %>さんのコメント<br>
+評価<%= review.score %><br>
+ <%= review.body %>
+
+
+<% end %>
+
   </div>
 </div>
